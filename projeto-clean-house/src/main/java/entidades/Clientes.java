@@ -1,40 +1,28 @@
 package entidades;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Empregada {
+public class Clientes extends PanacheEntityBase{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer codigo;
-
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    public Integer id;
     public String nome;
-
     public String cpf;
-
     public String email;
-
     public String telefone;
-    
-    public String endereco;
-    
-    public String descricao;
-    
-    public LocalDate data_nascimento;
+    public LocalDate dataCadastro;
+    public LocalDateTime ulimaAtualizacao;
+    public String atualizadoPor;
 
-    public LocalDateTime data_cadastro;
-
-    public Boolean status;
-
-
-    public LocalDate ultima_atualizacao;
-
-    public String atualizado_por;
-
+    @ManyToOne
+    public Enderecos endereco;
 }

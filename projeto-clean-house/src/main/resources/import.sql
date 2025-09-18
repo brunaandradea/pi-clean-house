@@ -1,0 +1,11 @@
+INSERT INTO Enderecos (rua, numero, complemento, bairro, cidade, estado, cep, latitude, longitude) VALUES ('Rua das Flores', 123, 'Apto 202', 'Jardim das Rosas', 'São Paulo', 'SP', '01234-567', -23.550520, -46.633308);
+INSERT INTO Enderecos (rua, numero, complemento, bairro, cidade, estado, cep, latitude, longitude) VALUES ('Avenida Brasil', 4567, NULL, 'Centro', 'Rio de Janeiro', 'RJ', '20040-002', -22.906847, -43.172896);
+INSERT INTO Enderecos (rua, numero, complemento, bairro, cidade, estado, cep, latitude, longitude) VALUES ('Rua XV de Novembro', 89, 'Casa 1', 'Boa Vista', 'Curitiba', 'PR', '80020-310', -25.428954, -49.267137);
+INSERT INTO Enderecos (rua, numero, complemento, bairro, cidade, estado, cep, latitude, longitude) VALUES ('Travessa da Serra', 77, NULL, 'Vila Nova', 'Porto Alegre', 'RS', '90460-100', -30.034647, -51.217658);
+INSERT INTO Enderecos (rua, numero, complemento, bairro, cidade, estado, cep, latitude, longitude) VALUES ('Alameda Santos', 1345, 'Conjunto B', 'Bela Vista', 'São Paulo', 'SP', '01310-100', -23.561684, -46.655981);
+
+INSERT INTO Clientes (nome, cpf, email, telefone, dataCadastro, ulimaAtualizacao, atualizadoPor, endereco_id) VALUES ('João Silva', '123.456.789-00', 'joao.silva@email.com', '(11) 91234-5678', '2023-05-10', '2023-09-15 14:32:10', 'admin', 1);
+INSERT INTO Clientes (nome, cpf, email, telefone, dataCadastro, ulimaAtualizacao, atualizadoPor, endereco_id) VALUES ('Maria Oliveira', '987.654.321-00', 'maria.oliveira@email.com', '(21) 99876-5432', '2023-06-22', '2023-09-16 09:15:45', 'usuario1', 2);
+INSERT INTO Clientes (nome, cpf, email, telefone, dataCadastro, ulimaAtualizacao, atualizadoPor, endereco_id) VALUES ('Carlos Pereira', '321.987.654-00', 'carlos.pereira@email.com', '(31) 93456-7890', '2023-07-01', '2023-09-17 11:00:00', 'usuario2', 3);
+INSERT INTO Clientes (nome, cpf, email, telefone, dataCadastro, ulimaAtualizacao, atualizadoPor, endereco_id) VALUES ('Ana Costa', '456.123.789-00', 'ana.costa@email.com', '(41) 97654-3210', '2023-08-10', '2023-09-17 13:25:30', 'admin', 4);
+INSERT INTO Clientes (nome, cpf, email, telefone, dataCadastro, ulimaAtualizacao, atualizadoPor, endereco_id) VALUES ('Lucas Martins', '654.321.987-00', 'lucas.martins@email.com', '(51) 98888-7777', '2023-09-05', '2023-09-17 16:45:00', 'usuario3', 5);
