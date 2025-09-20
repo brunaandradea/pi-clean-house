@@ -16,9 +16,9 @@ public class Pagamentos extends PanacheEntityBase {
     public Integer id;
     public Double valor;
     public String metodoPagamento;
-    public String Status;
-    public LocalDate dataPagamento;
-    public String comprovanteUrl;
+    public String status;
+    public LocalDate data_pagamento;
+    public String comprovante_url;
     
     @ManyToOne
     public Contratacoes contratacoes; 

@@ -1,8 +1,6 @@
 package entidades;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Entity;
@@ -12,32 +10,24 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Contratacoes extends PanacheEntityBase {
+public class Mensagens extends PanacheEntityBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
 
-    public LocalDate data_contratacao;
+    public String mensagem;
 
-    public LocalDate data_servico;
+    public LocalDateTime data_envio;
 
-    public LocalTime hora_inicio;
-
-    public Integer horas_contratadas;
-
-    public Double valor_total;
-
-    public String status;
-
-    public LocalDateTime ultima_atualizacao;
+    public Boolean status;
 
     @ManyToOne
-    public Empregadas empregadas;
+    public Contratacoes contratacoes;
 
     @ManyToOne
     public Clientes clientes;
 
     @ManyToOne
-    public Servicos servicos;
+    public Empregadas empregadas;
 
 }
