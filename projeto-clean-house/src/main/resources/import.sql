@@ -23,7 +23,7 @@ INSERT INTO Clientes (nome, cpf, email, telefone, dataCadastro, ulimaAtualizacao
 INSERT INTO Clientes (nome, cpf, email, telefone, dataCadastro, ulimaAtualizacao, atualizadoPor, endereco_id) VALUES ('Ana Costa', '456.123.789-00', 'ana.costa@email.com', '(41) 97654-3210', '2025-08-10', '2025-09-17 13:25:30', 'admin', 4);
 INSERT INTO Clientes (nome, cpf, email, telefone, dataCadastro, ulimaAtualizacao, atualizadoPor, endereco_id) VALUES ('Lucas Martins', '654.321.987-00', 'lucas.martins@email.com', '(51) 98888-7777', '2025-09-05', '2025-09-17 16:45:00', 'usuario3', 5);
 
--- Inserindo 5 Empregadas (ID 4 está inativa)
+-- Inserindo 5 Empregadas
 INSERT INTO Empregadas (nome, cpf, email, telefone, endereco, descricao, data_nascimento, data_cadastro, status, ultima_atualizacao, atualizado_por) VALUES ('Ana Paula', '111.222.333-44', 'ana.paula@email.com', '11911112222', 'Rua das Flores, 10', 'Especialista em limpeza pesada.', '1990-05-15', '2025-09-01', true, '2025-09-01 10:00:00', 'admin');
 INSERT INTO Empregadas (nome, cpf, email, telefone, endereco, descricao, data_nascimento, data_cadastro, status, ultima_atualizacao, atualizado_por) VALUES ('Beatriz Costa', '222.333.444-55', 'beatriz.costa@email.com', '11922223333', 'Avenida Central, 20', 'Experiência com pets e crianças.', '1988-11-20', '2025-09-02', true, '2025-09-02 11:30:00', 'admin');
 INSERT INTO Empregadas (nome, cpf, email, telefone, endereco, descricao, data_nascimento, data_cadastro, status, ultima_atualizacao, atualizado_por) VALUES ('Carla Dias', '333.444.555-66', 'carla.dias@email.com', '11933334444', 'Praça da Matriz, 30', 'Foco em organização de armários.', '1995-02-10', '2025-09-03', true, '2025-09-03 14:00:00', 'admin');
@@ -33,20 +33,20 @@ INSERT INTO Empregadas (nome, cpf, email, telefone, endereco, descricao, data_na
 -- =========== 3. DADOS DE RELACIONAMENTO E EVENTOS ===========
 
 -- Disponibilidade das empregadas ativas
-INSERT INTO Disponibilidade (dia_semana, hora_inicio, hora_fim, empregadas_id) VALUES ('Segunda-feira', '08:00:00', '12:00:00', 6);
-INSERT INTO Disponibilidade (dia_semana, hora_inicio, hora_fim, empregadas_id) VALUES ('Terça-feira', '09:00:00', '18:00:00', 8);
-INSERT INTO Disponibilidade (dia_semana, hora_inicio, hora_fim, empregadas_id) VALUES ('Quarta-feira', '13:00:00', '17:00:00', 7);
-INSERT INTO Disponibilidade (dia_semana, hora_inicio, hora_fim, empregadas_id) VALUES ('Sexta-feira', '08:00:00', '16:00:00', 10);
-INSERT INTO Disponibilidade (dia_semana, hora_inicio, hora_fim, empregadas_id) VALUES ('Sábado', '09:00:00', '13:00:00', 9);
+INSERT INTO Disponibilidade (dia_semana, hora_inicio, hora_fim, empregadas_id) VALUES ('Segunda-feira', '08:00:00', '12:00:00', 5);
+INSERT INTO Disponibilidade (dia_semana, hora_inicio, hora_fim, empregadas_id) VALUES ('Terça-feira', '09:00:00', '18:00:00', 4);
+INSERT INTO Disponibilidade (dia_semana, hora_inicio, hora_fim, empregadas_id) VALUES ('Quarta-feira', '13:00:00', '17:00:00', 3);
+INSERT INTO Disponibilidade (dia_semana, hora_inicio, hora_fim, empregadas_id) VALUES ('Sexta-feira', '08:00:00', '16:00:00', 1);
+INSERT INTO Disponibilidade (dia_semana, hora_inicio, hora_fim, empregadas_id) VALUES ('Sábado', '09:00:00', '13:00:00', 2);
 
 -- Contratações com status e valores diferentes (ID 4 foi cancelada pois a empregada está inativa)
-INSERT INTO Contratacoes (data_contratacao, data_servico, hora_inicio, horas_contratadas, valor_total, status, ultima_atualizacao, empregadas_id, clientes_id, servicos_id) VALUES ('2025-09-10', '2025-09-15', '09:00:00', 7, 150.00, 'AGENDADO', '2025-09-10 14:20:00', 1, 1, 1);
-INSERT INTO Contratacoes (data_contratacao, data_servico, hora_inicio, horas_contratadas, valor_total, status, ultima_atualizacao, empregadas_id, clientes_id, servicos_id) VALUES ('2025-09-11', '2025-09-18', '14:00:00', 8, 280.50, 'AGENDADO', '2025-09-11 10:00:00', 2, 2, 2);
-INSERT INTO Contratacoes (data_contratacao, data_servico, hora_inicio, horas_contratadas, valor_total, status, ultima_atualizacao, empregadas_id, clientes_id, servicos_id) VALUES ('2025-09-12', '2025-09-20', '10:00:00', 6, 200.00, 'CONCLUIDO', '2025-09-20 17:00:00', 3, 3, 3);
-INSERT INTO Contratacoes (data_contratacao, data_servico, hora_inicio, horas_contratadas, valor_total, status, ultima_atualizacao, empregadas_id, clientes_id, servicos_id) VALUES ('2025-09-13', '2025-09-22', '08:00:00', 9, 160.00, 'CANCELADO', '2025-09-15 09:00:00', 4, 4, 1);
-INSERT INTO Contratacoes (data_contratacao, data_servico, hora_inicio, horas_contratadas, valor_total, status, ultima_atualizacao, empregadas_id, clientes_id, servicos_id) VALUES ('2025-09-14', '2025-09-25', '13:00:00', 10, 180.75, 'AGENDADO', '2025-09-14 11:45:00', 5, 5, 4);
+INSERT INTO Contratacoes (data_contratacao, data_servico, hora_inicio, horas_contratadas, valor_total, status, ultima_atualizacao, empregadas_id, clientes_id, servicos_id) VALUES ('2025-09-10', '2025-09-15', '09:00:00', 7, 150.00, 'AGENDADO', '2025-09-10 14:20:00', 1, 2, 5);
+INSERT INTO Contratacoes (data_contratacao, data_servico, hora_inicio, horas_contratadas, valor_total, status, ultima_atualizacao, empregadas_id, clientes_id, servicos_id) VALUES ('2025-09-11', '2025-09-18', '14:00:00', 8, 280.50, 'AGENDADO', '2025-09-11 10:00:00', 2, 3, 2);
+INSERT INTO Contratacoes (data_contratacao, data_servico, hora_inicio, horas_contratadas, valor_total, status, ultima_atualizacao, empregadas_id, clientes_id, servicos_id) VALUES ('2025-09-12', '2025-09-20', '10:00:00', 6, 200.00, 'CONCLUIDO', '2025-09-20 17:00:00', 3, 4, 3);
+INSERT INTO Contratacoes (data_contratacao, data_servico, hora_inicio, horas_contratadas, valor_total, status, ultima_atualizacao, empregadas_id, clientes_id, servicos_id) VALUES ('2025-09-13', '2025-09-22', '08:00:00', 9, 160.00, 'CANCELADO', '2025-09-15 09:00:00', 4, 5, 1);
+INSERT INTO Contratacoes (data_contratacao, data_servico, hora_inicio, horas_contratadas, valor_total, status, ultima_atualizacao, empregadas_id, clientes_id, servicos_id) VALUES ('2025-09-14', '2025-09-25', '13:00:00', 10, 180.75, 'AGENDADO', '2025-09-14 11:45:00', 5, 1, 4);
 
--- Pagamentos com valores CORRIGIDOS para bater com as contratações
+-- Pagamentos com valores para bater com as contratações
 INSERT INTO Pagamentos (valor, metodoPagamento, status, data_pagamento, comprovante_url, contratacoes_id) VALUES (150.00, 'Cartão de Crédito', 'APROVADO', '2025-09-10', 'https://exemplo.com/comprovante1.jpg', 1);
 INSERT INTO Pagamentos (valor, metodoPagamento, status, data_pagamento, comprovante_url, contratacoes_id) VALUES (280.50, 'Boleto', 'PENDENTE', '2025-09-11', 'https://exemplo.com/comprovante2.jpg', 2);
 INSERT INTO Pagamentos (valor, metodoPagamento, status, data_pagamento, comprovante_url, contratacoes_id) VALUES (200.00, 'Pix', 'APROVADO', '2025-09-20', 'https://exemplo.com/comprovante3.jpg', 3);
@@ -54,22 +54,22 @@ INSERT INTO Pagamentos (valor, metodoPagamento, status, data_pagamento, comprova
 INSERT INTO Pagamentos (valor, metodoPagamento, status, data_pagamento, comprovante_url, contratacoes_id) VALUES (180.75, 'Transferência Bancária', 'PENDENTE', '2025-09-14', 'https://exemplo.com/comprovante5.jpg', 5);
 
 -- Mensagens relacionadas às contratações
-INSERT INTO Mensagens (mensagem, data_envio, status, contratacoes_id) VALUES ('Olá! Confirmando o serviço para o dia 15. Levo meus próprios produtos.', '2025-09-10 15:00:00', true, 1);
-INSERT INTO Mensagens (mensagem, data_envio, status, contratacoes_id) VALUES ('Tudo certo para quinta-feira. O endereço é o mesmo do cadastro?', '2025-09-11 11:00:00', true, 2);
-INSERT INTO Mensagens (mensagem, data_envio, status, contratacoes_id) VALUES ('Serviço finalizado com sucesso! Muito obrigado pela confiança.', '2025-09-20 16:50:00', true, 3);
-INSERT INTO Mensagens (mensagem, data_envio, status, contratacoes_id) VALUES ('Gostaria de reagendar o serviço do dia 25, se possível.', '2025-09-14 12:00:00', false, 5);
-INSERT INTO Mensagens (mensagem, data_envio, status, contratacoes_id) VALUES ('Recebi a confirmação. Até o dia 15!', '2025-09-10 15:05:00', true, 1);
+INSERT INTO Mensagens (mensagem, data_envio, status, clientes_id, empregadas_id, contratacoes_id) VALUES ('Olá! Confirmando o serviço para o dia 15. Levo meus próprios produtos.', '2025-09-10 15:00:00', true, 2, 1, 1);
+INSERT INTO Mensagens (mensagem, data_envio, status, clientes_id, empregadas_id, contratacoes_id) VALUES ('Tudo certo para quinta-feira. O endereço é o mesmo do cadastro?', '2025-09-11 11:00:00', true, 3, 2, 2);
+INSERT INTO Mensagens (mensagem, data_envio, status, clientes_id, empregadas_id, contratacoes_id) VALUES ('Serviço finalizado com sucesso! Muito obrigado pela confiança.', '2025-09-20 16:50:00', true, 4, 3, 3);
+INSERT INTO Mensagens (mensagem, data_envio, status, clientes_id, empregadas_id, contratacoes_id) VALUES ('Gostaria de reagendar o serviço do dia 25, se possível.', '2025-09-14 12:00:00', false, 1, 5, 5);
+INSERT INTO Mensagens (mensagem, data_envio, status, clientes_id, empregadas_id, contratacoes_id) VALUES ('Recebi a confirmação. Até o dia 15!', '2025-09-10 15:05:00', true, 2, 1, 1);
 
 -- Notificações com datas e eventos consistentes
-INSERT INTO Notificacoes (tipo_notificacao, mensagem, data_notificacao, status, empregadas_id, clientes_id) VALUES ('NOVA_CONTRATACAO', 'Você tem um novo serviço agendado para o dia 15/09.', '2025-09-10 14:21:00', 'NAO_LIDA', 8, NULL);
-INSERT INTO Notificacoes (tipo_notificacao, mensagem, data_notificacao, status, empregadas_id, clientes_id) VALUES ('LEMBRETE_SERVICO', 'Seu serviço com Beatriz Costa é amanhã!', '2025-09-17 09:00:00', 'LIDA', 9, 2);
-INSERT INTO Notificacoes (tipo_notificacao, mensagem, data_notificacao, status, empregadas_id, clientes_id) VALUES ('SERVICO_CONCLUIDO', 'O seu serviço com Carla Dias foi marcado como concluído.', '2025-09-20 17:01:00', 'NAO_LIDA', 7, 3);
-INSERT INTO Notificacoes (tipo_notificacao, mensagem, data_notificacao, status, empregadas_id, clientes_id) VALUES ('CONTRATACAO_CANCELADA', 'A contratação para o dia 22/09 foi cancelada (profissional indisponível).', '2025-09-15 09:02:00', 'LIDA', 6, 4);
-INSERT INTO Notificacoes (tipo_notificacao, mensagem, data_notificacao, status, empregadas_id, clientes_id) VALUES ('PAGAMENTO_APROVADO', 'Seu pagamento de R$ 200,00 para o serviço do dia 20/09 foi aprovado.', '2025-09-20 18:00:00', 'NAO_LIDA', 10, 3);
+INSERT INTO Notificacoes (tipo_notificacao, mensagem, data_notificacao, status, empregadas_id, clientes_id) VALUES ('NOVA_CONTRATACAO', 'Você tem um novo serviço agendado para o dia 15/09.', '2025-09-10 14:21:00', 'NAO_LIDA', 2, 1);
+INSERT INTO Notificacoes (tipo_notificacao, mensagem, data_notificacao, status, empregadas_id, clientes_id) VALUES ('LEMBRETE_SERVICO', 'Seu serviço com Beatriz Costa é amanhã!', '2025-09-17 09:00:00', 'LIDA', 3, 2);
+INSERT INTO Notificacoes (tipo_notificacao, mensagem, data_notificacao, status, empregadas_id, clientes_id) VALUES ('SERVICO_CONCLUIDO', 'O seu serviço com Carla Dias foi marcado como concluído.', '2025-09-20 17:01:00', 'NAO_LIDA', 1, 3);
+INSERT INTO Notificacoes (tipo_notificacao, mensagem, data_notificacao, status, empregadas_id, clientes_id) VALUES ('CONTRATACAO_CANCELADA', 'A contratação para o dia 22/09 foi cancelada (profissional indisponível).', '2025-09-15 09:02:00', 'LIDA', 4, 4);
+INSERT INTO Notificacoes (tipo_notificacao, mensagem, data_notificacao, status, empregadas_id, clientes_id) VALUES ('PAGAMENTO_APROVADO', 'Seu pagamento de R$ 200,00 para o serviço do dia 20/09 foi aprovado.', '2025-09-20 18:00:00', 'NAO_LIDA', 5, 3);
 
--- Avaliações apenas para o serviço CONCLUÍDO (Contratação 3)
-INSERT INTO Avaliacoes (tipo_avaliacao, nota, comentario, data_avaliacao, empregadas_id, clientes_id, contratacoes_id) VALUES ('SERVICO', 5, 'A Carla foi fantástica! Muito detalhista e profissional. Recomendo!', '2025-09-21 11:00:00', 7, 8, 5);
-INSERT INTO Avaliacoes (tipo_avaliacao, nota, comentario, data_avaliacao, empregadas_id, clientes_id, contratacoes_id) VALUES ('PONTUALIDADE', 5, 'Chegou no horário combinado.', '2025-09-21 11:01:00', 6, 9, 5);
-INSERT INTO Avaliacoes (tipo_avaliacao, nota, comentario, data_avaliacao, empregadas_id, clientes_id, contratacoes_id) VALUES ('COMUNICACAO', 4, 'A comunicação foi boa, mas poderia ter respondido um pouco mais rápido.', '2025-09-21 11:02:00', 10, 8, 3);
-INSERT INTO Avaliacoes (tipo_avaliacao, nota, comentario, data_avaliacao, empregadas_id, clientes_id, contratacoes_id) VALUES ('CUSTO_BENEFICIO', 5, 'O preço foi justo pela qualidade do serviço prestado.', '2025-09-21 11:03:00', 9, 7, 5);
-INSERT INTO Avaliacoes (tipo_avaliacao, nota, comentario, data_avaliacao, empregadas_id, clientes_id, contratacoes_id) VALUES ('GERAL', 5, 'Excelente experiência, com certeza contratarei novamente.', '2025-09-21 11:04:00', 10, 6, 2);
+-- Avaliações apenas para o serviço CONCLUÍDO 
+INSERT INTO Avaliacoes (tipo_avaliacao, comentario, data_avaliacao, nota, empregadas_id, contratacoes_id, clientes_id) VALUES ('SERVICO', 'A Carla foi fantástica! Muito detalhista e profissional. Recomendo!', '2025-09-21 11:00:00', 5, 5, 5, 1);
+INSERT INTO Avaliacoes (tipo_avaliacao, comentario, data_avaliacao, nota, empregadas_id, contratacoes_id, clientes_id) VALUES ('PONTUALIDADE', 'Chegou no horário combinado.', '2025-09-21 11:01:00', 5, 2, 2, 3);
+INSERT INTO Avaliacoes (tipo_avaliacao, comentario, data_avaliacao, nota, empregadas_id, contratacoes_id, clientes_id) VALUES ('COMUNICACAO', 'A comunicação foi boa, mas poderia ter respondido um pouco mais rápido.', '2025-09-19 10:01:00', 4, 3, 3, 4);
+INSERT INTO Avaliacoes (tipo_avaliacao, comentario, data_avaliacao, nota, empregadas_id, contratacoes_id, clientes_id) VALUES ('CUSTO_BENEFICIO', 'O preço foi justo pela qualidade do serviço prestado.', '2025-09-20 09:33:00', 5, 4, 4, 5);
+INSERT INTO Avaliacoes (tipo_avaliacao, comentario, data_avaliacao, nota, empregadas_id, contratacoes_id, clientes_id) VALUES ('SERVICO', 'Excelente experiência, com certeza contratarei novamente.', '2025-09-21 15:02:00', 5, 1, 5, 4);
