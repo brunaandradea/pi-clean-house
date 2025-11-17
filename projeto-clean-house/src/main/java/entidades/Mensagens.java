@@ -30,4 +30,10 @@ public class Mensagens extends PanacheEntityBase {
     @ManyToOne
     public Empregadas empregadas;
 
+    public Object remetente;
+
+    public Object conteudo;
+
+    public Object destinatario;
+
 }
