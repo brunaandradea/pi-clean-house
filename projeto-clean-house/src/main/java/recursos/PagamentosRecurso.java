@@ -11,10 +11,13 @@ import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
 
 @Path ("pagamentos")
 public class PagamentosRecurso {
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     public List<Pagamentos> listar() {
         return Pagamentos.listAll(Sort.ascending("id"));
 }

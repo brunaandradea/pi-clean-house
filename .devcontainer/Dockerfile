@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     mysql-server \
     && rm -rf /var/lib/apt/lists/*
 
-RUN echo "CREATE USER 'cleanhouse'@'localhost' IDENTIFIED BY 'Unifio@123'; \
+RUN echo "CREATE USER 'cleanhouse'@'localhost' IDENTIFIED BY 'Projeto@123'; \
         GRANT ALL PRIVILEGES ON *.* TO 'cleanhouse'@'localhost' WITH GRANT OPTION; \
         CREATE DATABASE projeto; \
         FLUSH PRIVILEGES;" > /tmp/script.sql

@@ -1,0 +1,14 @@
+{
+    "microprofile.tools.validation.unknown.excluded": [
+        "*/mp-rest/providers/*/priority",
+        "mp.openapi.schema.*",
+        "kafka-streams.*",
+        "camel.*",
+        "quarkus.hibernate-orm.log.sql",
+        "quarkus.hibernate-orm.schema-management.strategy",
+        "quarkus.datasource.db-kind",
+        "quarkus.datasource.username",
+        "quarkus.datasource.password",
+        "quarkus.datasource.jdbc.url"
+    ]
+}

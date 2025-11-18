@@ -12,10 +12,13 @@ import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
 
 @Path("mensagens")
 public class MensagensRecurso {
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     public List<PanacheEntityBase> listar() {
         return Mensagens.listAll(Sort.ascending("id"));
     }
@@ -44,10 +47,10 @@ public class MensagensRecurso {
         Mensagens mensagensExistente = Mensagens.findById(id);
 
         if (mensagensExistente != null) {
-            mensagensExistente.conteudo = mensagens.conteudo;
+            mensagensExistente.mensagem = mensagens.mensagem;
             mensagensExistente.data_envio = mensagens.data_envio;
-            mensagensExistente.remetente = mensagens.remetente;
-            mensagensExistente.destinatario = mensagens.destinatario;
+            mensagensExistente.cliente = mensagens.cliente;
+            mensagensExistente.empregada = mensagens.empregada;
 
             mensagensExistente.persist();
         }

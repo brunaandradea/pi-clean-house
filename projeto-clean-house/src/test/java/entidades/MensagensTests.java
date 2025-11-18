@@ -13,8 +13,8 @@ public class MensagensTests {
     public void testCriarUmaMensagemDeUmClienteParaUmaEmpregada(){
         Mensagens mensagens = new Mensagens();
         mensagens.mensagem = "Olá, gostaria de saber mais sobre o serviço.";
-        mensagens.clientes = Clientes.findById(1);
-        mensagens.empregadas = Empregadas.findById(1);
+        mensagens.cliente = Clientes.findById(1);
+        mensagens.empregada = Empregadas.findById(1);
 
         mensagens.persist();
 
