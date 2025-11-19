@@ -18,7 +18,7 @@ public class Mensagens extends PanacheEntityBase {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id; 
 
-    @Column(name = "mensagens") 
+    @Column(name = "mensagem") 
     public String mensagem;
 
     public LocalDateTime data_envio;
